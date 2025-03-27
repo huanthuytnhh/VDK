@@ -14,7 +14,7 @@ void loop()
   int sensorValue = analogRead(SENSOR_PIN);  // Đọc giá trị cảm biến (0 - 1023)
   Serial.println(sensorValue);               // In giá trị ra Serial Monitor
 
-  if (sensorValue < 100) {  // Nếu phát hiện vạch đen
+  if (sensorValue >700 ) {  // Nếu phát hiện vạch đen
     tone(BUZZER_PIN, 100);  // Bật buzzer với tần số 1000Hz
     delay(300);  // Bíp trong 300ms
     noTone(BUZZER_PIN);  // Tắt buzzer
